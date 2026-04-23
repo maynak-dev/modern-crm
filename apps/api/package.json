@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "tsx watch src/server.ts",
-    "build": "tsc -p tsconfig.json",
+    "build": "npm run build --workspace=packages/shared && tsc -p tsconfig.json",
     "start": "node dist/server.js",
     "db:push": "drizzle-kit push",
     "db:seed": "tsx src/db/seed.ts"
