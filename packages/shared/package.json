@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -14,13 +13,7 @@
     }
   },
   "files": ["dist"],
-  "scripts": {
-    "build": "tsc -p tsconfig.json"
-  },
   "dependencies": {
     "zod": "^3.23.8"
-  },
-  "devDependencies": {
-    "typescript": "^5.6.3"
   }
 }

@@ -2,18 +2,12 @@
   "name": "modern-crm",
   "private": true,
   "version": "1.0.0",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
+  "workspaces": ["apps/*", "packages/*"],
   "scripts": {
     "dev": "concurrently -n api,web -c blue,magenta \"npm:dev --workspace=apps/api\" \"npm:dev --workspace=apps/web\"",
-    "build": "npm run build --workspace=packages/shared && npm run build --workspace=apps/api && npm run build --workspace=apps/web"
+    "build": "npm run build --workspace=apps/api && npm run build --workspace=apps/web"
   },
   "devDependencies": {
     "concurrently": "^9.0.1"
-  },
-  "dependencies": {
-    "@neondatabase/serverless": "^1.1.0"
   }
 }
